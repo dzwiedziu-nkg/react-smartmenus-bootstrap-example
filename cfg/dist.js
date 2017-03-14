@@ -39,4 +39,7 @@ config.module.loaders.push({
   )
 });
 
+// Add plugins defined in base.js
+config.plugins = baseConfig.plugins.concat(config.plugins);
+
 module.exports = config;

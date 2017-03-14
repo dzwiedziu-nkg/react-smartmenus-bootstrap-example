@@ -1,6 +1,7 @@
 'use strict';
 let path = require('path');
 let defaultSettings = require('./defaults');
+const webpack = require('webpack');
 
 // Additional npm or bower modules to include in builds
 // Add all foreign plugins you may need into this array
@@ -39,5 +40,10 @@ module.exports = {
       'react/lib/ReactMount': 'react-dom/lib/ReactMount'
     }
   },
-  module: {}
+  module: {},
+  plugins: [
+      new webpack.ProvidePlugin({
+        jQuery: 'jquery'
+      })
+  ],
 };
