@@ -31,3 +31,7 @@ bower_components/
 
 # IDE/Editor data
 .idea
+
+# It is no module, it is example then I ignore dist. It works like:
+# http://vadikom.github.io/smartmenus/src/demo/index.html
+dist
