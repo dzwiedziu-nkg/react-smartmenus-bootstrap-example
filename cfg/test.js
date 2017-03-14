@@ -56,3 +56,7 @@ module.exports = {
     })
   ]
 };
+
+// Add aliases and plugins defined in base.js
+module.exports.resolve.alias = Object.assign({}, baseConfig.resolve.alias, module.exports.resolve.alias);
+module.exports.plugins = baseConfig.plugins.concat(module.exports.plugins);
